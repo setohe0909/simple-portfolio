@@ -25,6 +25,18 @@ class Portfolio {
     const totalProfit = this.profit(startDate, endDate);
     const start = new Date(startDate);
     const end = new Date(endDate);
+
+    /*
+    *  This part converts milliseconds into years:
+    *  1000 milliseconds = 1 second
+    *  60 seconds = 1 minute
+    *  60 minutes = 1 hour
+    *  24 hours = 1 day
+    *  365 days = 1 year (this is assuming a non-leap year for simplicity)
+    *
+    * Note: Dividing the difference in milliseconds (end - start) by the conversion factor 
+    * 1000 * 60 * 60 * 24 * 365 gives the number of years between the two dates.
+    */
     const years = (end - start) / (1000 * 60 * 60 * 24 * 365);
     return (1 + totalProfit) ** (1 / years) - 1;
   }
