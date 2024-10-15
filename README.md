@@ -1,4 +1,11 @@
-# simple-portfolio
+# Simple-portfolio
+
+How to execute the project?
+
+```bash
+$ cd src
+$ node app.js
+```
 
 - main task
 
